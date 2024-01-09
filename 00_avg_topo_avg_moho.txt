@@ -1,0 +1,2 @@
+average topo (km):    0.937
+average moho (km):    34.285
