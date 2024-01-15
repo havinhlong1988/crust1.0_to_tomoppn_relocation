@@ -116,7 +116,9 @@
           fname="model_100.000_21.000.dat"
           write(fname(7:9),'(i3.3)')int(long(inc))
           write(fname(11:13),'(i3.3)')int((long(inc)-int(long(inc)))*1000)
-          write(fname(15:20),'(f6.3)')lat(inc)
+          write(fname(15:16),'(f2.2)')int(lat(inc))
+          write(fname(17:20),'(i3.3)')int((lat(inc)-int(lat(inc)))*1000)
+
           write(0,'(a)')fname
           open(1,file='./output/models_layercake/'//fname,status="unknown")
           idx=0
