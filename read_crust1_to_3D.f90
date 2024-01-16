@@ -116,8 +116,8 @@
           fname="model_100.000_21.000.dat"
           write(fname(7:9),'(i3.3)')int(long(inc))
           write(fname(11:13),'(i3.3)')int((long(inc)-int(long(inc)))*1000)
-          write(fname(15:16),'(f2.2)')int(lat(inc))
-          write(fname(17:20),'(i3.3)')int((lat(inc)-int(lat(inc)))*1000)
+          write(fname(15:16),'(i2.2)')int(lat(inc))
+          write(fname(18:20),'(i3.3)')int((lat(inc)-int(lat(inc)))*1000)
 
           write(0,'(a)')fname
           open(1,file='./output/models_layercake/'//fname,status="unknown")
@@ -205,7 +205,8 @@
             fname="model_100.000_21.000.dat"
             write(fname(7:9),'(i3.3)')int(long_now)
             write(fname(11:13),'(i3.3)')int((long_now-int(long_now))*1000)
-            write(fname(15:20),'(f6.3)')lat_now
+            write(fname(15:16),'(i2.2)')int(lat_now)
+            write(fname(18:20),'(i3.3)')int((lat_now-int(lat_now))*1000)
             ! 
             inquire(file='./output/models_gradient/'//fname,exist=ex)
             if (ex) then
